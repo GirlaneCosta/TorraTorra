@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masculino - Lojão Torra Torra</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+        }
+    }
+    </script>
+    <style>
+        .category-page-title {
+            text-align: center;
+            margin: 40px 0;
+            color: var(--color-primary);
+        }
+        
+        .product-grid-category {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+        
+        .product-image {
+            height: 280px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/torra.png" alt="Lojão Torra Torra">
+                    </a>
+                    <div class="logo-text">LOJÃO <span class="highlight">T</span>ORRA <span class="highlight">T</span>ORRA</div>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="O que você está procurando?">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li class="nav-item has-dropdown">
+                        <a href="feminino.html">Feminino</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-column">
+                                <h3>Roupas</h3>
+                                <ul>
+                                    <li><a href="#">Blusas</a></li>
+                                    <li><a href="#">Camisetas</a></li>
+                                    <li><a href="#">Vestidos</a></li>
+                                    <li><a href="#">Saias</a></li>
+                                    <li><a href="#">Calças</a></li>
+                                    <li><a href="#">Jeans</a></li>
+                                    <li><a href="#">Shorts</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-column">
+                                <h3>Calçados</h3>
+                                <ul>
+                                    <li><a href="#">Tênis</a></li>
+                                    <li><a href="#">Sandálias</a></li>
+                                    <li><a href="#">Sapatilhas</a></li>
+                                    <li><a href="#">Botas</a></li>
+                                    <li><a href="#">Chinelos</a></li>
+                                </ul>
+                                <h3>Acessórios</h3>
+                                <ul>
+                                    <li><a href="#">Bolsas</a></li>
+                                    <li><a href="#">Bijuterias</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="masculino.html">Masculino</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-column">
+                                <h3>Roupas</h3>
+                                <ul>
+                                    <li><a href="#">Camisetas</a></li>
+                                    <li><a href="#">Camisas</a></li>
+                                    <li><a href="#">Calças</a></li>
+                                    <li><a href="#">Jeans</a></li>
+                                    <li><a href="#">Bermudas</a></li>
+                                    <li><a href="#">Moletons</a></li>
+                                    <li><a href="#">Polos</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-column">
+                                <h3>Calçados</h3>
+                                <ul>
+                                    <li><a href="#">Tênis</a></li>
+                                    <li><a href="#">Sapatos</a></li>
+                                    <li><a href="#">Chinelos</a></li>
+                                    <li><a href="#">Sandálias</a></li>
+                                </ul>
+                                <h3>Acessórios</h3>
+                                <ul>
+                                    <li><a href="#">Cintos</a></li>
+                                    <li><a href="#">Carteiras</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="infantil.html">Infantil</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-column">
+                                <h3>Meninas</h3>
+                                <ul>
+                                    <li><a href="#">Blusas</a></li>
+                                    <li><a href="#">Vestidos</a></li>
+                                    <li><a href="#">Shorts</a></li>
+                                    <li><a href="#">Calças</a></li>
+                                    <li><a href="#">Conjuntos</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-column">
+                                <h3>Meninos</h3>
+                                <ul>
+                                    <li><a href="#">Camisetas</a></li>
+                                    <li><a href="#">Bermudas</a></li>
+                                    <li><a href="#">Calças</a></li>
+                                    <li><a href="#">Conjuntos</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-column">
+                                <h3>Calçados</h3>
+                                <ul>
+                                    <li><a href="#">Tênis</a></li>
+                                    <li><a href="#">Sandálias</a></li>
+                                    <li><a href="#">Chinelos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="calcados.html">Calçados</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-column">
+                                <h3>Feminino</h3>
+                                <ul>
+                                    <li><a href="#">Tênis</a></li>
+                                    <li><a href="#">Sandálias</a></li>
+                                    <li><a href="#">Sapatilhas</a></li>
+                                    <li><a href="#">Botas</a></li>
+                                    <li><a href="#">Chinelos</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-column">
+                                <h3>Masculino</h3>
+                                <ul>
+                                    <li><a href="#">Tênis</a></li>
+                                    <li><a href="#">Sapatos</a></li>
+                                    <li><a href="#">Chinelos</a></li>
+                                    <li><a href="#">Sandálias</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-column">
+                                <h3>Infantil</h3>
+                                <ul>
+                                    <li><a href="#">Tênis</a></li>
+                                    <li><a href="#">Sandálias</a></li>
+                                    <li><a href="#">Chinelos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="sale-link">OFERTAS</a></li>
+                    <li class="nav-item"><a href="bolsas.html" class="sale-link">Bolsas</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="category-page-title">Moda Masculina</h1>
+            
+            <div class="product-grid-category">
+                <div class="product-card">
+                    <div class="product-badge">NOVO</div>
+                    <div class="product-image">
+                        <img src="/masculino1.jpeg" alt="Moda Masculina">
+                        <div class="product-actions">
+                            <button class="btn-icon"><i class="fas fa-heart"></i></button>
+                            <button class="btn-icon"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Camisetas Diversas</h3>
+                        <div class="product-price">
+                            <span class="current-price">Gostaria de saber o valor chama no Whatsapp</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">-20%</div>
+                    <div class="product-image">
+                        <img src="/masculino2.jpeg" alt="Moda Masculina">
+                        <div class="product-actions">
+                            <button class="btn-icon"><i class="fas fa-heart"></i></button>
+                            <button class="btn-icon"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Bonés Variados</h3>
+                        <div class="product-price">
+                            <span class="current-price">Gostaria de saber o valor chama no Whatsapp</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h3>Institucional</h3>
+                        <ul>
+                            <li><a href="#">Quem Somos</a></li>
+                            <li><a href="https://maps.app.goo.gl/wbMBjEkeq268P8zd9" target="_blank" class="tooltip">Nossa Loja<span class="tooltiptext">Ao lado da Caixa Econômica, venha conferir!</span></a></li>
+                            <li><a href="#">Política de Privacidade</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Ajuda</h3>
+                        <ul>
+                            <li><a target="_blank" href="https://api.whatsapp.com/send/?phone=5561993579010&text=Ol%C3%A1%2C+Preciso+de+ajuda%21&type=phone_number&app_absent=0">Telefone: (61) 99357-9010</a></li>
+                            <li><a href="https://maps.app.goo.gl/wbMBjEkeq268P8zd9" target="_blank" class="tooltip">Como Comprar<span class="tooltiptext">Nossa unidade esta localizada no Jardim Brasília.</span></a></li>
+                            <li><a href="#">Pagamentos</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Formas de Pagamento</h3>
+                        <div class="payment-methods">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-pix"></i>
+                            <i class="fas fa-barcode"></i>
+                        </div>
+                        <h3>Redes Sociais</h3>
+                        <div class="social-media">
+                            <a target="_blank" href="https://www.facebook.com/profile.php?id=61556745492346#"><i class="fab fa-facebook-f"></i></a>
+                            <a target="_blank" href="https://www.instagram.com/lojaotorratorraoficial/"><i class="fab fa-instagram"></i></a>
+                            <a target="_blank" href="https://api.whatsapp.com/send/?phone=5561993579010&text=Ol%C3%A1%2C+Preciso+de+ajuda%21&type=phone_number&app_absent=0"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p> 2025 Lojão Torra Torra - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
